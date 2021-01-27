@@ -100,7 +100,7 @@ def make_plot():
         
         plot = figure(x_axis_type="datetime", plot_height = height, plot_width=width, toolbar_location = 'below',
                tools = "box_zoom, reset, pan", title = title,
-                  x_range = (dt.datetime(2020,1,1),dt.datetime(2021,1,1)) )
+                  x_range = (dt.datetime(2020,1,1),dt.datetime(2021,2,1)) )
 
         plot.line(x = x,
                   y = y2017, line_width=3.5, line_alpha=0.5, line_color = "red", line_dash = "dashed"
