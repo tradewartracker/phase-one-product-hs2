@@ -32,6 +32,8 @@ file = "./data"+ "/data.parquet"
 
 df = pq.read_table(file).to_pandas()
 
+df.sort_index(inplace=True)
+
 options = df.index.unique(0).to_list()
 
 #print(options)
@@ -69,6 +71,7 @@ def make_plot():
     width = int(1.15*750)
     
     foo = df.loc[product_select.value]
+    #foo = df.query("@a < a")
     # below there is an object of selections which will be one of the values in 
     # the list of options. So the .value then grabs that particular option selected.
 
