@@ -23,6 +23,9 @@ from bokeh.transform import factor_cmap
 # Alot of this was built of this "cross-fire demo"
 # https://github.com/bokeh/bokeh/blob/branch-2.3/examples/app/crossfilter/main.py
 
+start_date = dt.datetime(2017,7,1)
+end_date = dt.datetime(2021,4,1)
+
 background = "#ffffff"
 
 file = "./data"+ "/data.parquet"
@@ -33,7 +36,7 @@ options = df.index.unique(0).to_list()
 
 #print(options)
 
-product = "IRON AND STEEL, HS CODE 72"
+product = "HS CODE 72, IRON AND STEEL"
 
 level = "US Dollars"
 
@@ -91,7 +94,7 @@ def make_plot():
     # This is standard bokeh stuff so far
         plot = figure(x_axis_type="datetime", plot_height = height, plot_width=width, toolbar_location = 'below',
            tools = "box_zoom, reset, pan, xwheel_zoom", title = title,
-                  x_range = (dt.datetime(2017,7,1),dt.datetime(2021,2,1)) )
+                  x_range = (start_date,end_date) )
 
         plot.line(x = x,
               y = y, line_width=3.5, line_alpha=0.75, line_color = "slategray")
