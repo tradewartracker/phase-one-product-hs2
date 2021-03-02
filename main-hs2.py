@@ -239,7 +239,7 @@ product_select = Select(value=product, title='Product', options=sorted(options),
 product_select.on_change('value', update_plot)
 # Change the value upone selection via the update plot 
 
-div0 = Div(text = """Each category is a 2 digit HS Code. Only Phase One covered products as defined in Annex 6-1 of The Agreement within that HS Code are shown. Red marks the period of Section 301 tariffs and retaliation. Blue is period of agreement.\n
+div0 = Div(text = """Categories are at both the HS2 and HS4 level. Only Phase One covered products as defined in Annex 6-1 of The Agreement within that HS Code are shown. Red marks the period of Section 301 tariffs and retaliation. Blue is period of agreement.\n
     \n
     \n
     """, width=400, background = background, style={"justify-content": "space-between", "display": "flex"} )
