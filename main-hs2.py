@@ -24,7 +24,7 @@ from bokeh.transform import factor_cmap
 # https://github.com/bokeh/bokeh/blob/branch-2.3/examples/app/crossfilter/main.py
 
 start_date = dt.datetime(2017,7,1)
-end_date = dt.datetime(2022,1,1)
+end_date = dt.datetime(2022,2,1)
 
 background = "#ffffff"
 
